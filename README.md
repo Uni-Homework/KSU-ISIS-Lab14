@@ -9,7 +9,7 @@
 # 1. Назначение IP адресов
 
 Шпора (для автора методички)
-<img width="1875" height="508" alt="image" src="https://github.com/user-attachments/assets/2be9292c-ea5b-4a48-bb5f-d4de954d7c4e" />
+<img width="1872" height="524" alt="image" src="https://github.com/user-attachments/assets/9306febb-2008-47e7-9ca0-42cb60caa274" />
 
 
 ## VPC1
@@ -579,7 +579,7 @@ add interface=ether1 address=10.20.7.2/30
 ```
 
 ```
-add interface=ether2 address=10.10.6.1/30
+add interface=ether2 address=10.20.6.1/30
 ```
 
 [admin@M5]>:
