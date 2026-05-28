@@ -8,6 +8,10 @@
 
 # 1. Назначение IP адресов
 
+Шпора (для автора методички)
+<img width="1875" height="508" alt="image" src="https://github.com/user-attachments/assets/2be9292c-ea5b-4a48-bb5f-d4de954d7c4e" />
+
+
 ## VPC1
 ```
 ip 10.10.1.2/30 gateway 10.10.1.1
@@ -147,7 +151,7 @@ int e1/1
 ```
 
 ```
-ip addr 10.10.8.1 255.255.255.252
+ip addr 10.1.1.1 255.255.255.252
 ```
 
 ```
@@ -159,7 +163,7 @@ int e1/2
 ```
 
 ```
-ip addr 10.1.1.1 255.255.255.252
+ip addr 10.10.8.1 255.255.255.252
 ```
 
 ```
@@ -477,11 +481,11 @@ ip address
 
 [admin@M2] /ip address>:
 ```
-add interface=ether1 address=10.20.7.2/30
+add interface=ether1 address=10.10.7.2/30
 ```
 
 ```
-add interface=ether2 address=10.20.6.1/30
+add interface=ether2 address=10.10.6.1/30
 ```
 
 [admin@M2]>:
@@ -493,6 +497,38 @@ ip dhcp-client
 ```
 remove number=0
 ```
+
+## M3
+
+[admin@Mikrotik]>:
+```
+system identity set name=M3
+```
+
+[admin@M3]>:
+```
+ip address
+```
+
+[admin@M3] /ip address>:
+```
+add interface=ether1 address=10.10.8.2/30
+```
+
+```
+add interface=ether2 address=10.10.7.1/30
+```
+
+[admin@M3]>:
+```
+ip dhcp-client
+```
+
+[admin@M3] /ip dhcp-client>:
+```
+remove number=0
+```
+
 
 ## M4
 
