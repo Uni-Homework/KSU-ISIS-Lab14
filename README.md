@@ -427,169 +427,280 @@ do write
 exit
 ```
 
-## Mikrotik (логинься сразу на всех роутерах!)
-Login: admin
+## CM1
 
-Password:
-(пароля нет!)
-
-Show license?>n
-
-## M1
-
-[admin@Mikrotik]>:
+Router>:
 ```
-system identity set name=M1
+en
 ```
 
-[admin@M1]>:
+Router#:
 ```
-ip address
+conf t
 ```
 
-[admin@M1] /ip address>:
+Router(config)#:
 ```
-add interface=ether1 address=10.10.5.2/30
+hostname CM1
+```
+
+CM1(config)#:
+```
+int e0/0
 ```
 
 ```
-add interface=ether2 address=10.10.4.1/30
-```
-
-[admin@M1]>:
-```
-ip dhcp-client
-```
-
-[admin@M1] /ip dhcp-client>:
-```
-remove number=0
-```
-
-## M2
-
-[admin@Mikrotik]>:
-```
-system identity set name=M2
-```
-
-[admin@M2]>:
-```
-ip address
-```
-
-[admin@M2] /ip address>:
-```
-add interface=ether1 address=10.10.7.2/30
+ip addr 10.10.5.2 255.255.255.252
 ```
 
 ```
-add interface=ether2 address=10.10.6.1/30
-```
-
-[admin@M2]>:
-```
-ip dhcp-client
-```
-
-[admin@M2] /ip dhcp-client>:
-```
-remove number=0
-```
-
-## M3
-
-[admin@Mikrotik]>:
-```
-system identity set name=M3
-```
-
-[admin@M3]>:
-```
-ip address
-```
-
-[admin@M3] /ip address>:
-```
-add interface=ether1 address=10.10.8.2/30
+no shutdown
 ```
 
 ```
-add interface=ether2 address=10.10.7.1/30
-```
-
-[admin@M3]>:
-```
-ip dhcp-client
-```
-
-[admin@M3] /ip dhcp-client>:
-```
-remove number=0
-```
-
-## M4
-
-[admin@Mikrotik]>:
-```
-system identity set name=M4
-```
-
-[admin@M4]>:
-```
-ip address
-```
-
-[admin@M4] /ip address>:
-```
-add interface=ether1 address=10.20.3.2/30
+int e0/1
 ```
 
 ```
-add interface=ether2 address=10.20.2.1/30
-```
-
-[admin@M4]>:
-```
-ip dhcp-client
-```
-
-[admin@M4] /ip dhcp-client>:
-```
-remove number=0
-```
-
-## M5
-
-[admin@Mikrotik]>:
-```
-system identity set name=M5
-```
-
-[admin@M5]>:
-```
-ip address
-```
-
-[admin@M5] /ip address>:
-```
-add interface=ether1 address=10.20.7.2/30
+ip addr 10.10.4.1 255.255.255.252
 ```
 
 ```
-add interface=ether2 address=10.20.6.1/30
+no shutdown
 ```
 
-[admin@M5]>:
 ```
-ip dhcp-client
-```
-
-[admin@M5] /ip dhcp-client>:
-```
-remove number=0
+end
 ```
 
+CM1#:
+```
+write memory
+```
+
+```
+exit
+```
+
+## CM2
+
+Router>:
+```
+en
+```
+
+Router#:
+```
+conf t
+```
+
+Router(config)#:
+```
+hostname CM2
+```
+
+CM2(config)#:
+```
+int e0/0
+```
+
+```
+ip addr 10.10.7.2 255.255.255.252
+```
+
+```
+no shutdown
+```
+
+```
+int e0/1
+```
+
+```
+ip addr 10.10.6.1 255.255.255.252
+```
+
+```
+no shutdown
+```
+
+```
+end
+```
+
+CM2#:
+```
+write memory
+```
+
+```
+exit
+```
+
+## CM3
+
+Router>:
+```
+en
+```
+
+Router#:
+```
+conf t
+```
+
+Router(config)#:
+```
+hostname CM3
+```
+
+CM3(config)#:
+```
+int e0/0
+```
+
+```
+ip addr 10.10.8.2 255.255.255.252
+```
+
+```
+no shutdown
+```
+
+```
+int e0/1
+```
+
+```
+ip addr 10.10.7.1 255.255.255.252
+```
+
+```
+no shutdown
+```
+
+```
+end
+```
+
+CM3#:
+```
+write memory
+```
+
+```
+exit
+```
+
+## CM4
+
+Router>:
+```
+en
+```
+
+Router#:
+```
+conf t
+```
+
+Router(config)#:
+```
+hostname CM4
+```
+
+CM4(config)#:
+```
+int e0/0
+```
+
+```
+ip addr 10.20.3.2 255.255.255.252
+```
+
+```
+no shutdown
+```
+
+```
+int e0/1
+```
+
+```
+ip addr 10.20.2.1 255.255.255.252
+```
+
+```
+no shutdown
+```
+
+```
+end
+```
+
+CM4#:
+```
+write memory
+```
+
+```
+exit
+```
+
+## CM5
+
+Router>:
+```
+en
+```
+
+Router#:
+```
+conf t
+```
+
+Router(config)#:
+```
+hostname CM5
+```
+
+CM5(config)#:
+```
+int e0/0
+```
+
+```
+ip addr 10.20.7.2 255.255.255.252
+```
+
+```
+no shutdown
+```
+
+```
+int e0/1
+```
+
+```
+ip addr 10.20.6.1 255.255.255.252
+```
+
+```
+no shutdown
+```
+
+```
+end
+```
+
+CM5#:
+```
+write memory
+```
+
+```
+exit
+```
 # 2. Routing
 
 ## Cisco
@@ -904,12 +1015,12 @@ show run | sec route
 
 Внимание! Сначала в кажом M роутере напишите команду /, иначе будут ошибки! Внимательно следите за ошибками!
 
-[admin@M1]>:
+[admin`M1]>:
 ```
 ip route
 ```
 
-[admin@M1] /ip route>:
+[admin`M1] /ip route>:
 ```
 add dst-address=10.10.1.0/30 gateway=10.10.5.1
 ```
@@ -934,19 +1045,19 @@ add dst-address=10.20.6.0/30 gateway=10.10.5.1
 add dst-address=10.1.1.0/30 gateway=10.10.5.1
 ```
 
-[admin@M1]>:
+[admin`M1]>:
 ```
 export
 ```
 
 ## M2
 
-[admin@M2]>:
+[admin`M2]>:
 ```
 ip route
 ```
 
-[admin@M2] /ip route>:
+[admin`M2] /ip route>:
 ```
 add dst-address=10.10.1.0/30 gateway=10.10.7.1
 ```
@@ -971,19 +1082,19 @@ add dst-address=10.20.6.0/30 gateway=10.10.7.1
 add dst-address=10.1.1.0/30 gateway=10.10.7.1
 ```
 
-[admin@M2]>:
+[admin`M2]>:
 ```
 export
 ```
 
 ## M3
 
-[admin@M3]>:
+[admin`M3]>:
 ```
 ip route
 ```
 
-[admin@M3] /ip route>:
+[admin`M3] /ip route>:
 ```
 add dst-address=10.10.1.0/30 gateway=10.10.8.1
 ```
@@ -1012,19 +1123,19 @@ add dst-address=10.20.6.0/30 gateway=10.10.8.1
 add dst-address=10.1.1.0/30 gateway=10.10.8.1
 ```
 
-[admin@M3]>:
+[admin`M3]>:
 ```
 export
 ```
 
 ## M4
 
-[admin@M4]>:
+[admin`M4]>:
 ```
 ip route
 ```
 
-[admin@M4] /ip route>:
+[admin`M4] /ip route>:
 ```
 add dst-address=10.10.1.0/30 gateway=10.20.3.1
 ```
@@ -1053,19 +1164,19 @@ add dst-address=10.20.6.0/30 gateway=10.20.3.1
 add dst-address=10.1.1.0/30 gateway=10.20.3.1
 ```
 
-[admin@M4]>:
+[admin`M4]>:
 ```
 export
 ```
 
 ## M5
 
-[admin@M5]>:
+[admin`M5]>:
 ```
 ip route
 ```
 
-[admin@M5] /ip route>:
+[admin`M5] /ip route>:
 ```
 add dst-address=10.10.1.0/30 gateway=10.20.7.1
 ```
@@ -1090,7 +1201,7 @@ add dst-address=10.20.4.0/30 gateway=10.20.7.1
 add dst-address=10.1.1.0/30 gateway=10.20.7.1
 ```
 
-[admin@M5]>:
+[admin`M5]>:
 ```
 export
 ```
