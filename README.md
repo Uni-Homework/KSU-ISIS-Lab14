@@ -3,6 +3,10 @@
 Делаем схему 1 в 1
 
 Обрати внимание на расположение интерфейсов!!! (eth0, e0/0 и т.д.)
+<img width="864" height="352" alt="image" src="https://github.com/user-attachments/assets/1b3b5ad6-6c4c-4945-8043-fb15d95b8d4b" />
+
+
+SDOshnoe
 <img width="1177" height="333" alt="image" src="https://github.com/user-attachments/assets/65c3e46f-e245-4c10-9697-f9f46c048c8c" />
 
 
