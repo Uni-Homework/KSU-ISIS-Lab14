@@ -1011,197 +1011,260 @@ C5#:
 show run | sec route
 ```
 
-## M1
+## CM1
 
-Внимание! Сначала в кажом M роутере напишите команду /, иначе будут ошибки! Внимательно следите за ошибками!
-
-[admin`M1]>:
+CM1>:
 ```
-ip route
+en
 ```
 
-[admin`M1] /ip route>:
+CM1#:
 ```
-add dst-address=10.10.1.0/30 gateway=10.10.5.1
-```
-
-```
-add dst-address=10.10.6.0/30 gateway=10.10.5.1
+conf t
 ```
 
+CM1(config)#:
 ```
-add dst-address=10.20.1.0/30 gateway=10.10.5.1
+ip route 10.10.1.0 255.255.255.252 10.10.5.1
 ```
 
 ```
-add dst-address=10.20.4.0/30 gateway=10.10.5.1
+ip route 10.10.6.0 255.255.255.252 10.10.5.1
 ```
 
 ```
-add dst-address=10.20.6.0/30 gateway=10.10.5.1
+ip route 10.20.1.0 255.255.255.252 10.10.5.1
 ```
 
 ```
-add dst-address=10.1.1.0/30 gateway=10.10.5.1
-```
-
-[admin`M1]>:
-```
-export
-```
-
-## M2
-
-[admin`M2]>:
-```
-ip route
-```
-
-[admin`M2] /ip route>:
-```
-add dst-address=10.10.1.0/30 gateway=10.10.7.1
+ip route 10.20.4.0 255.255.255.252 10.10.5.1
 ```
 
 ```
-add dst-address=10.10.4.0/30 gateway=10.10.7.1
+ip route 10.20.6.0 255.255.255.252 10.10.5.1
 ```
 
 ```
-add dst-address=10.20.1.0/30 gateway=10.10.7.1
+ip route 10.1.1.0 255.255.255.252 10.10.5.1
 ```
 
 ```
-add dst-address=10.20.4.0/30 gateway=10.10.7.1
+do write
 ```
 
 ```
-add dst-address=10.20.6.0/30 gateway=10.10.7.1
+exit
+```
+
+CM1#:
+```
+show run | sec route
+```
+
+## CM2
+
+CM2>:
+```
+en
+```
+
+CM2#:
+```
+conf t
+```
+
+CM2(config)#:
+```
+ip route 10.10.1.0 255.255.255.252 10.10.7.1
 ```
 
 ```
-add dst-address=10.1.1.0/30 gateway=10.10.7.1
-```
-
-[admin`M2]>:
-```
-export
-```
-
-## M3
-
-[admin`M3]>:
-```
-ip route
-```
-
-[admin`M3] /ip route>:
-```
-add dst-address=10.10.1.0/30 gateway=10.10.8.1
+ip route 10.10.4.0 255.255.255.252 10.10.7.1
 ```
 
 ```
-add dst-address=10.10.4.0/30 gateway=10.10.8.1
+ip route 10.20.1.0 255.255.255.252 10.10.7.1
 ```
 
 ```
-add dst-address=10.10.6.0/30 gateway=10.10.7.2
+ip route 10.20.4.0 255.255.255.252 10.10.7.1
 ```
 
 ```
-add dst-address=10.20.1.0/30 gateway=10.10.8.1
+ip route 10.20.6.0 255.255.255.252 10.10.7.1
 ```
 
 ```
-add dst-address=10.20.4.0/30 gateway=10.10.8.1
+ip route 10.1.1.0 255.255.255.252 10.10.7.1
 ```
 
 ```
-add dst-address=10.20.6.0/30 gateway=10.10.8.1
+do write
 ```
 
 ```
-add dst-address=10.1.1.0/30 gateway=10.10.8.1
+exit
 ```
 
-[admin`M3]>:
+CM2#:
 ```
-export
-```
-
-## M4
-
-[admin`M4]>:
-```
-ip route
+show run | sec route
 ```
 
-[admin`M4] /ip route>:
+## CM3
+
+CM3>:
 ```
-add dst-address=10.10.1.0/30 gateway=10.20.3.1
+en
 ```
 
+CM3#:
 ```
-add dst-address=10.10.4.0/30 gateway=10.20.3.1
+conf t
 ```
 
+CM3(config)#:
 ```
-add dst-address=10.10.6.0/30 gateway=10.20.3.1
+ip route 10.10.1.0 255.255.255.252 10.10.8.1
 ```
 
 ```
-add dst-address=10.20.1.0/30 gateway=10.20.2.2
+ip route 10.10.4.0 255.255.255.252 10.10.8.1
 ```
 
 ```
-add dst-address=10.20.4.0/30 gateway=10.20.3.1
+ip route 10.10.6.0 255.255.255.252 10.10.7.2
 ```
 
 ```
-add dst-address=10.20.6.0/30 gateway=10.20.3.1
+ip route 10.20.1.0 255.255.255.252 10.10.8.1
 ```
 
 ```
-add dst-address=10.1.1.0/30 gateway=10.20.3.1
-```
-
-[admin`M4]>:
-```
-export
-```
-
-## M5
-
-[admin`M5]>:
-```
-ip route
-```
-
-[admin`M5] /ip route>:
-```
-add dst-address=10.10.1.0/30 gateway=10.20.7.1
+ip route 10.20.4.0 255.255.255.252 10.10.8.1
 ```
 
 ```
-add dst-address=10.10.4.0/30 gateway=10.20.7.1
+ip route 10.20.6.0 255.255.255.252 10.10.8.1
 ```
 
 ```
-add dst-address=10.10.6.0/30 gateway=10.20.7.1
+ip route 10.1.1.0 255.255.255.252 10.10.8.1
 ```
 
 ```
-add dst-address=10.20.1.0/30 gateway=10.20.7.1
+do write
 ```
 
 ```
-add dst-address=10.20.4.0/30 gateway=10.20.7.1
+exit
+```
+
+CM3#:
+```
+show run | sec route
+```
+
+## CM4
+
+CM4>:
+```
+en
+```
+
+CM4#:
+```
+conf t
+```
+
+CM4(config)#:
+```
+ip route 10.10.1.0 255.255.255.252 10.20.3.1
 ```
 
 ```
-add dst-address=10.1.1.0/30 gateway=10.20.7.1
+ip route 10.10.4.0 255.255.255.252 10.20.3.1
 ```
 
-[admin`M5]>:
 ```
-export
+ip route 10.10.6.0 255.255.255.252 10.20.3.1
+```
+
+```
+ip route 10.20.1.0 255.255.255.252 10.20.2.2
+```
+
+```
+ip route 10.20.4.0 255.255.255.252 10.20.3.1
+```
+
+```
+ip route 10.20.6.0 255.255.255.252 10.20.3.1
+```
+
+```
+ip route 10.1.1.0 255.255.255.252 10.20.3.1
+```
+
+```
+do write
+```
+
+```
+exit
+```
+
+CM4#:
+```
+show run | sec route
+```
+
+## CM5
+
+CM5>:
+```
+en
+```
+
+CM5#:
+```
+conf t
+```
+
+CM5(config)#:
+```
+ip route 10.10.1.0 255.255.255.252 10.20.7.1
+```
+
+```
+ip route 10.10.4.0 255.255.255.252 10.20.7.1
+```
+
+```
+ip route 10.10.6.0 255.255.255.252 10.20.7.1
+```
+
+```
+ip route 10.20.1.0 255.255.255.252 10.20.7.1
+```
+
+```
+ip route 10.20.4.0 255.255.255.252 10.20.7.1
+```
+
+```
+ip route 10.1.1.0 255.255.255.252 10.20.7.1
+```
+
+```
+do write
+```
+
+```
+exit
+```
+
+CM5#:
+```
+show run | sec route
 ```
