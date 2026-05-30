@@ -95,7 +95,7 @@ ip addr 10.10.3.1 255.255.255.252
 ```
 
 ```
-shutdown
+no shutdown
 ```
 
 ```
@@ -107,7 +107,7 @@ ip addr 10.10.5.1 255.255.255.252
 ```
 
 ```
-shutdown
+no shutdown
 ```
 
 ```
@@ -119,7 +119,7 @@ ip addr 10.20.5.1 255.255.255.252
 ```
 
 ```
-shutdown
+no shutdown
 ```
 
 ```
@@ -131,7 +131,7 @@ ip addr 10.20.3.1 255.255.255.252
 ```
 
 ```
-shutdown
+no shutdown
 ```
 
 ```
@@ -143,7 +143,7 @@ ip addr 10.20.8.1 255.255.255.252
 ```
 
 ```
-shutdown
+no shutdown
 ```
 
 ```
@@ -155,7 +155,7 @@ ip addr 10.1.1.1 255.255.255.252
 ```
 
 ```
-shutdown
+no shutdown
 ```
 
 ```
@@ -167,7 +167,7 @@ ip addr 10.10.8.1 255.255.255.252
 ```
 
 ```
-shutdown
+no shutdown
 ```
 
 ```
@@ -204,7 +204,7 @@ ip addr 10.10.2.1 255.255.255.252
 ```
 
 ```
-shutdown
+no shutdown
 ```
 
 ```
@@ -216,7 +216,7 @@ ip addr 10.10.3.2 255.255.255.252
 ```
 
 ```
-shutdown
+no shutdown
 ```
 
 ```
@@ -254,7 +254,7 @@ ip addr 10.10.1.1 255.255.255.252
 ```
 
 ```
-shutdown
+no shutdown
 ```
 
 ```
@@ -266,7 +266,7 @@ ip addr 10.10.2.2 255.255.255.252
 ```
 
 ```
-shutdown
+no shutdown
 ```
 
 ```
@@ -304,7 +304,7 @@ ip addr 10.20.2.2 255.255.255.252
 ```
 
 ```
-shutdown
+no shutdown
 ```
 
 ```
@@ -316,7 +316,7 @@ ip addr 10.20.1.1 255.255.255.252
 ```
 
 ```
-shutdown
+no shutdown
 ```
 
 ```
@@ -354,7 +354,7 @@ ip addr 10.20.5.2 255.255.255.252
 ```
 
 ```
-shutdown
+no shutdown
 ```
 
 ```
@@ -366,7 +366,7 @@ ip addr 10.20.4.1 255.255.255.252
 ```
 
 ```
-shutdown
+no shutdown
 ```
 
 ```
@@ -404,7 +404,7 @@ ip addr 10.20.8.2 255.255.255.252
 ```
 
 ```
-shutdown
+no shutdown
 ```
 
 ```
@@ -416,7 +416,7 @@ ip addr 10.20.7.1 255.255.255.252
 ```
 
 ```
-shutdown
+no shutdown
 ```
 
 ```
